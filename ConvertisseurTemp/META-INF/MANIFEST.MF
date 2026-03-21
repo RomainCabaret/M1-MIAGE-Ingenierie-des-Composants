@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ConvertisseurTemp
+Bundle-SymbolicName: ConvertisseurTemp
+Bundle-Version: 1.0.0
+Bundle-Activator: convertisseurtemp.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: contratconvertisseur,
+ org.osgi.framework;version="1.3.0"
+Automatic-Module-Name: ConvertisseurTemp

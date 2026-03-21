@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BibliothequeExt
+Bundle-SymbolicName: BibliothequeExt
+Bundle-Version: 1.0.0
+Export-Package: contratconvertisseur,
+ convertisseurframe
+Bundle-Activator: bibliothequeext.Activator
+Bundle-ClassPath: ContratConvertisseur_1.0.0.jar,
+ .,
+ ConvertisseurFrame_1.0.0.jar
+Bundle-Vendor: rc
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: org.osgi.framework;version="1.3.0"
+Automatic-Module-Name: BibliothequeExt

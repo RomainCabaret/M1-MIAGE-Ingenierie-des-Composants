@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: C3Name
+Bundle-SymbolicName: C3
+Bundle-Version: 1.0.0
+Bundle-Activator: c3.ActivateurC3
+Bundle-Vendor: RC
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: Types_exo1_td1,
+ org.osgi.framework;version="1.3.0"
+Automatic-Module-Name: C3

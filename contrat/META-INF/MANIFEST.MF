@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ContratName
+Bundle-SymbolicName: contrat
+Bundle-Version: 1.0.1.qualifier
+Export-Package: Types_exo1_td1
+Bundle-Vendor: RC
+Automatic-Module-Name: contrat
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
