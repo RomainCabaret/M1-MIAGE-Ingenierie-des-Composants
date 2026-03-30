@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: C2name
 Bundle-SymbolicName: C2
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.0.0
 Bundle-Activator: c2.Activator
 Bundle-Vendor: RC
 Bundle-RequiredExecutionEnvironment: JavaSE-21

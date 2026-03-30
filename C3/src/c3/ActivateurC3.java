@@ -1,6 +1,5 @@
 package c3;
 
-import Types_exo1_td1.TypeService1;
 import Types_exo1_td1.TypeService2;
 
 import org.osgi.framework.BundleActivator;

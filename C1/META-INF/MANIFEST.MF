@@ -2,10 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: C1
 Bundle-SymbolicName: C1
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.0.0
 Bundle-Activator: c1.Activator
 Bundle-Vendor: CR
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: Types_exo1_td1,
+ contratconvertisseur,
  org.osgi.framework;version="1.3.0"
 Automatic-Module-Name: C1

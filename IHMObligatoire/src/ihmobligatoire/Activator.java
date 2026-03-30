@@ -1,6 +1,4 @@
-package ihmconvertisseur;
-
-import java.util.Collection;
+package ihmobligatoire;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
@@ -18,6 +16,13 @@ public class Activator implements BundleActivator {
 	private Convertisseur service;
 
 	public void start(BundleContext c) throws Exception {
+		
+		sr = c.getServiceReference(Convertisseur.class);
+
+		if (sr == null) {
+			throw new Exception();
+		}
+
 
 		frame = new ConvertisseurFrame("Convertisseur") {
 			protected void closingOperation() {
@@ -30,14 +35,10 @@ public class Activator implements BundleActivator {
 			}
 		};
 
-		sr = c.getServiceReference(Convertisseur.class);
-		//PLUS TARD -> c.getAllServiceReferences(null, null) OU getServiceReferences POUR PLUSIEURS SERVICES
-
-		if (sr != null) {
-			service = c.getService(sr);
-			frame.setConvertisseur(service);
-		}
-
+		
+		
+		service = c.getService(sr);
+		frame.setConvertisseur(service);
 	}
 
 	public void stop(BundleContext c) throws Exception {
