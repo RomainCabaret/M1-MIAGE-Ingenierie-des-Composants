@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: C1dynec
+Bundle-SymbolicName: c1dynec
+Bundle-Version: 1.0.0
+Bundle-Activator: c1dynec.Activator
+Bundle-Vendor: RC
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Import-Package: Types_exo1_td1,
+ org.osgi.framework;version="1.3.0"
+Automatic-Module-Name: c1dynec
