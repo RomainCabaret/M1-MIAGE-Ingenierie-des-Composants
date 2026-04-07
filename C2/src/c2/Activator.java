@@ -41,6 +41,8 @@ public class Activator implements BundleActivator {
 			c.ungetService(refGet);
 			service = null;
 		}
+		refPost.unregister()
+		refPost = null
 	}
 
 }
