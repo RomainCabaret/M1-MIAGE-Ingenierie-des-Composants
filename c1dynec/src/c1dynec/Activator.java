@@ -17,7 +17,6 @@ public class Activator implements BundleActivator, ServiceListener {
 
 	public void start(BundleContext c) throws Exception {
 		this.context = c;
-		context.addServiceListener(this);
 		ref = c.getServiceReference(TypeService1.class);
 
 		if (ref != null) {
@@ -31,6 +30,7 @@ public class Activator implements BundleActivator, ServiceListener {
 		}
 
 		System.out.println("Le service C1 est disponible !");
+		context.addServiceListener(this); // QUAND UN SERVICE EST OBLIGATOIRE = addServiceListener A LA FIN du code de la méthode start
 
 	}
 
@@ -61,10 +61,12 @@ public class Activator implements BundleActivator, ServiceListener {
 			}
 		}
 	}
-	private void traitementNouveauService(ServiceReference<TypeService1> re) {		
+	private void traitementNouveauService(ServiceReference<TypeService1> re) {
+		
 	}
 
-	private void traitementModificationService(ServiceReference<TypeService1> re) {		
+	private void traitementModificationService(ServiceReference<TypeService1> re) {
+		// PAS DE PROPRIETE A SURVEILLER
 	}
 
 	private void traitementDepartService(ServiceReference<TypeService1> re) {

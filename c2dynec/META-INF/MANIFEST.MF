@@ -1,6 +1,5 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: C2dynec
 Bundle-SymbolicName: c2dynec
 Bundle-Version: 1.0.0
 Bundle-Activator: c2dynec.Activator

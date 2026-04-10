@@ -10,7 +10,7 @@ import org.osgi.framework.ServiceRegistration;
 import Types_exo1_td1.TypeService1;
 import Types_exo1_td1.TypeService2;
 
-public class Activator implements BundleActivator, ServiceListener {
+public class Activator implements BundleActivator {
 
 	private static BundleContext context;
 
@@ -18,63 +18,23 @@ public class Activator implements BundleActivator, ServiceListener {
 		return context;
 	}
 
-	private ServiceReference<TypeService2> refGet;
-	private ServiceRegistration<TypeService1> refPost;
 	
-	private TypeService2 service;
+	private EcouteurImpl ec;
+	private ServiceRegistration<TypeService1> refPost;
 
-
-	public void start(BundleContext c) throws Exception {
-		// ------ GET 
-		
-		refGet = c.getServiceReference(TypeService2.class);
-		
-		if(refGet != null) {
-			service = c.getService(refGet);
-		} else {
-			service = null;
-		}
-		
-		
-		// ------ POST
+	public void start(BundleContext c) throws Exception {		
+		ec = new EcouteurImpl(c);
+		context.addServiceListener(ec);
 		
 		refPost = c.registerService(TypeService1.class, new TypeService1Impl(), null);
-		
 		System.out.println("Le service C2 est disponible !");
 
 	}
 
 	public void stop(BundleContext c) throws Exception {
-		if(refGet != null) {
-			c.ungetService(refGet);
-			service = null;
-		}
-	}
-	@Override
-	public void serviceChanged(ServiceEvent event) {
-		ServiceReference<?> r = event.getServiceReference();
+		refPost.unregister(); // ORDRE TRES IMPORTANT
+		ec.stop(c);
+		context.removeServiceListener(ec);
 
-		String[] t = (String[]) r.getProperty("objectClass");
-		if (t[0].equals(TypeService1.class.getName())) {
-			ServiceReference<TypeService1> re = (ServiceReference<TypeService1>) r;
-			switch (event.getType()) {
-				case ServiceEvent.UNREGISTERING:
-					traitementDepartService(re);
-					break;
-				case ServiceEvent.REGISTERED:
-					traitementNouveauService(re);
-					break;	
-				case ServiceEvent.MODIFIED:
-					traitementModificationService(re);
-					break;
-			}
-		}
 	}
-	private void traitementNouveauService(ServiceReference<TypeService1> re) {		
-	}
-
-	private void traitementModificationService(ServiceReference<TypeService1> re) {		
-	}
-
-	private void traitementDepartService(ServiceReference<TypeService1> re) {}
 }
