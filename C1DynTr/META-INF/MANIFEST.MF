@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: C1DynTr
+Bundle-SymbolicName: C1DynTr
+Bundle-Version: 1.0.0
+Bundle-Activator: c1dyntr.Activator
+Bundle-Vendor: RC
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: Types_exo1_td1,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="[1.5.0,2.0.0)"
+Automatic-Module-Name: C1DynTr

@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ihmconvertisseurdyntr2
+Bundle-SymbolicName: ihmconvertisseurdyntr2
+Bundle-Version: 1.0.0
+Bundle-Activator: ihmconvertisseurdyntr2.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: contratconvertisseur,
+ convertisseurframe,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.util.tracker;version="[1.5.0,2.0.0)"
+Automatic-Module-Name: ihmconvertisseurdyntr2
