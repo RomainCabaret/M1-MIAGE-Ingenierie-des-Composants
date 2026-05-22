@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="start" immediate="true" name="DSExempleName">
+   <implementation class="ComponentDSImpl"/>
+   <property name="langue" type="String" value="Fr"/>
+   <property name="Size" type="Integer" value="15"/>
+   <properties entry="OSGI-INF/componentCS.xml"/>
+   <service>
+      <provide interface="Types_exo1_td1.TypeService1"/>
+   </service>
+   <reference bind="lier" cardinality="0..1" interface="contratconvertisseur.Convertisseur" name="C" policy="dynamic" target="(Langue=*)" unbind="delier"/>
+</scr:component>

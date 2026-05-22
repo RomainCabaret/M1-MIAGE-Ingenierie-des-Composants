@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: C2DS
+Bundle-SymbolicName: C2DS
+Bundle-Version: 1.0.0
+Bundle-Activator: c2ds.Activator
+Bundle-Vendor: RC
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: Types_exo1_td1,
+ org.osgi.framework;version="1.3.0"
+Service-Component: C2CS.xml
+Automatic-Module-Name: C2DS

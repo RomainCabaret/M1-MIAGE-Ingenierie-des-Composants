@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="C2DS">
+   <implementation class="sources.C2DS_Impl"/>
+   <service>
+      <provide interface="Types_exo1_td1.TypeService1"/>
+   </service>
+   <reference cardinality="0..1" interface="Types_exo1_td1.TypeService2" name="c" policy="static"/>
+</scr:component>
